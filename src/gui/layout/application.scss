@@ -1,0 +1,93 @@
+// ==========================================================================
+// Global Imports
+// ==========================================================================
+
+@import 'primary/sass/index';
+@import 'base/index';
+@import 'layout/index';
+@import 'components/index';
+@import 'user/index';
+@import 'admin/index';
+
+* {
+    box-sizing:border-box;
+    -webkit-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+html {
+    background-color: rgb(247, 247, 247);
+}
+
+header {
+    font-family: $font-stack-secondary;
+}
+
+body {
+    font-family: $font-stack-primary;
+}
+
+hr {
+    animation: slide-in-left 0.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both 1s;
+}
+
+.nav-container {
+    width: 90%;
+    margin: auto;
+}
+
+.brand-logo:hover {
+    background-color: rgba(0,0,0,0);
+}
+
+#tab-form-card {
+    border-radius: 0;
+    height: 50px;
+}
+
+#pdf-form {
+    order: 1;
+}
+#input-form {
+    order: 2;
+    max-width: 800px;
+@media (max-width: 850px) {
+}
+    .flex-container {
+        flex-direction: column;
+    }
+}
+@media (max-width: 768px) {
+    .col-two {
+        flex: 2 100%;
+    }
+}
+@media only screen and (min-width: 601px) {
+    #tab-form-card {
+        height: 50px !important;
+    }
+}
+@media (max-width: 500px) {
+    .primary-container {
+        margin: 0;
+        width: 100%;
+    }
+    .nav-container {
+        width: 100% !important;
+    }
+    .container {
+        width: 100% !important;
+    }
+    h1, h2 {
+        text-align: center;
+    }
+}

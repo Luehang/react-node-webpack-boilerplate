@@ -1,0 +1,13 @@
+
+// ----------------------------------
+// loader animation -----------------
+// ----------------------------------
+.loader-spin {
+    height: 45px;
+    width: 45px;
+    border: 4.5px solid rgba(0,0,0,.2);
+    border-radius: 50%;
+    border-left-color: #000;
+    margin: 0 auto;
+    @include animation(rotating 0.9s infinite linear);
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ title }}</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+        {{!-- <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script> --}}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+
+    {{!-- Global site tag (gtag.js) - Google Analytics --}}
+    <input id="googleAnalytic" type="hidden" value="{{ GOOGLE_TRACKING_ID }}" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ GOOGLE_TRACKING_ID }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', document.getElementById('googleAnalytic').value);
+    </script>
+
+    <header>
+        {{> header }}
+    </header>
+
+    {{!-- Error and success message alerts. --}}
+    {{#if hasSuccess }}
+        <div class="annotation-content">
+            <div class="annotation">
+                <a class="close" href="#"><img src="/img/close.svg"/></a>
+                <div id="success" class="alert alert-success">
+                    <p style="color: green;">{{ successMsg }}</p>
+                </div>
+                <p class="support-text"><a href="#contact">Contact Customer Service</a></p>
+            </div>
+        </div>
+    {{/if }}
+
+    {{#if hasErrors }}
+        <div class="annotation-content">
+            <div class="annotation">
+                <a class="close"><img src="/img/close.svg"/></a>
+                <div class="alert alert-danger">
+                    {{#each messages }}
+                        <p style="color: red;">* {{this}}</p>
+                    {{/each }}
+                </div>
+                <p class="support-text"><a href="#contact">Contact Customer Service</a></p>
+            </div>
+        </div>
+    {{/if }}
+        
+    {{{ body }}}
+    
+    <footer class="orange">
+        <div class="footer-container">
+            {{> footer }}
+        </div>
+    </footer>
+    <script type="text/javascript">
+        // close event for annotation
+        $('.annotation-content .close').click(function() {
+            $('.annotation-content').css('display', 'none');
+        });
+    </script>
+</html>
+

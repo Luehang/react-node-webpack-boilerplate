@@ -1,0 +1,78 @@
+#upload-button {
+    width: 250px;
+    display: block;
+    margin: 0px auto 20px;
+}
+
+#file-to-upload {
+    display: none;
+}
+
+#pdf-main-container {
+    width: 400px;
+    margin: 20px auto;
+}
+
+#pdf-loader-- {
+    display: block;
+    text-align: center;
+    color: #999999;
+    font-size: 13px;
+    line-height: 100px;
+    height: 100px;
+}
+#pdf-loader {
+    display: none;
+    text-align: center;
+    color: #999999;
+    font-size: 13px;
+    line-height: 100px;
+}
+
+#pdf-contents {
+    display: none;
+}
+
+#pdf-meta {
+    overflow: hidden;
+    margin: 0 0 20px 0;
+}
+
+#pdf-buttons {
+    display: flex;
+    flex-direction: row;
+}
+#pdf-prev {
+    flex: 1;
+}
+#pdf-next {
+    flex: 1;
+}
+
+#page-count-container {
+    flex: 1;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+#pdf-current-page {
+    display: inline;
+}
+
+#pdf-total-pages {
+    display: inline;
+}
+
+#pdf-canvas {
+    border: 1px solid rgba(0,0,0,0.2);
+    box-sizing: border-box;
+}
+
+#page-loader {
+    line-height: 100px;
+    text-align: center;
+    display: block;
+    color: #999999;
+    font-size: 13px;
+}

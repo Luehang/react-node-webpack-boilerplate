@@ -1,0 +1,5 @@
+{
+  "presets": [["env", {"modules": false}]],
+  "plugins": ["transform-react-jsx", "react-hot-loader/babel"],
+  "env": {"test": {"presets": ["env"]}}
+}

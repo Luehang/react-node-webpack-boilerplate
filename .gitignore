@@ -1,0 +1,7 @@
+node_modules/
+public/
+coverage/
+.env
+
+jsconfig.json
+bundle-analysis-stats.json
