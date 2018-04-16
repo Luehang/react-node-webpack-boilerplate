@@ -6,15 +6,17 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackTemplate = require('html-webpack-template');
 const WebpackChunkHash = require('webpack-chunk-hash');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
-module.exports = {
+plugins = {
   CleanWebpackPlugin:
     new CleanWebpackPlugin([
-      path.resolve('public/')
+      path.resolve('public/'),
+      path.resolve('views/pages/')
     ], {
       root: process.cwd(),
-      watch: true
+      watch: false
     }),
 
   HtmlIndexPlugin:
@@ -65,3 +67,11 @@ module.exports = {
   BundleAnalyzerPlugin:
     new BundleAnalyzerPlugin(),
 };
+
+plugins.ImageminPlugin = (environment) => {
+  return new ImageminPlugin({
+    disable: environment !== 'production', // Disable during development
+  });
+}
+
+module.exports = plugins;
