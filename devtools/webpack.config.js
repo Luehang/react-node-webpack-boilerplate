@@ -23,7 +23,14 @@ module.exports = (params) => {
         {
           test: /\.js$/,
           exclude: /node_modules/,
-          use: 'babel-loader',
+          use: [
+            {
+                loader: 'babel-loader',
+                options: {
+                    presets: ['env', 'react']
+                }
+            }
+          ]
         },
         {
           test: /\.(jpe?g|png|svg|gif|ico|ttf|woff|woff2|eot)$/,
