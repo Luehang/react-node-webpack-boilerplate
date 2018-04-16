@@ -97,7 +97,6 @@ app.use(function(req, res, next) {
 app.use(methodOverride('_method'));
 
 // routes
-// app.use('/admin/administration', require('./routes/administration'));
 app.use('/', require('./routes/index'));
 
 // catch 404 and forward to error handler
