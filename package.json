@@ -17,7 +17,8 @@
   "scripts": {
     "prebuild:dev": "rimraf public",
     "build:dev": "webpack --config devtools/webpack.config",
-    "start": "webpack --config devtools/webpack.config --env.environment=development",
+    "webpack": "webpack --config devtools/webpack.config --env.environment=development",
+    "start": "nodemon ./www/bin",
     "prebuild": "rimraf public",
     "build": "webpack --config devtools/webpack.config --env.environment=production",
     "test": "jest",

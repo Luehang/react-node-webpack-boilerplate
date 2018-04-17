@@ -7,20 +7,24 @@ Clone this project and run:
 
 ## Getting started
 
-#### 1. `npm start`
+#### 1. `npm run webpack`
+
+Compiles and create a public directory for development.
+
+#### 2. `npm start`
 
 Runs the app in development mode.<br>
 Open [http://localhost:5000/test](http://localhost:5000/test) to view it in the browser.
 
-The page will automatically modify without reloading when you make changes to the code. (React Hot Loader) <br>
+The page will automatically modify without reloading when you make changes to the code. <br>
 You will see the build errors and lint warnings in the console.
 
-#### 2. `npm run test`
+#### 3. `npm run test`
 
 Runs the test watcher in an interactive mode.<br>
 By default, runs tests related to files changed since the last commit.
 
-#### 3. `npm run build`
+#### 4. `npm run build`
 
 Builds the app for production to the `public` folder.<br>
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -29,7 +33,7 @@ The build is minified and the filenames include the hashes.<br>
 
 Your app is ready to be deployed.
 
-#### 4. `npm run analysis` (Webpack Bundle Analyzer)
+#### 5. `npm run analysis` (Webpack Bundle Analyzer)
 
 This script will help you:
 * Realize what's really inside your bundle
