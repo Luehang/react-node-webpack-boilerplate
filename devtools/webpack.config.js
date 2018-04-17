@@ -59,7 +59,6 @@ module.exports = (params) => {
 
     plugins: [
       plugins.CleanWebpackPlugin,
-      plugins.ImageminPlugin(config.environment),
       plugins.HtmlIndexPlugin,
       plugins.HtmlTestPageTwoPlugin
     ],

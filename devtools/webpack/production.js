@@ -50,6 +50,7 @@ module.exports = (config) => {
       plugins.HashedModuleIdsPlugin,
       plugins.WebpackChunkHash,
       plugins.ExtractTextPlugin,
+      plugins.ImageminPlugin(config.environment),
     ],
   };
 };
