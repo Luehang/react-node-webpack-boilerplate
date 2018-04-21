@@ -45,7 +45,7 @@ module.exports = (config) => {
 
     output: {
       path: path.resolve(process.cwd(), 'public'),
-      filename: '[name].[hash].js',
+      filename: 'javascripts/[name].[hash].js',
       publicPath: '/',
     },
 

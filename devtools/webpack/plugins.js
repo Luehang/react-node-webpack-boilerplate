@@ -57,7 +57,7 @@ plugins = {
 
   ExtractTextPlugin:
     new ExtractTextPlugin({
-      filename: '[name].[chunkhash].css',
+      filename: 'stylesheets/[name].[chunkhash].css',
       allChunks: true,
     }),
 

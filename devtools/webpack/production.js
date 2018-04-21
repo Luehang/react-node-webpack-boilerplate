@@ -41,7 +41,7 @@ module.exports = (config) => {
 
     output: {
       path: path.resolve(process.cwd(), 'public'),
-      filename: '[name].[chunkhash].js',
+      filename: 'javascripts/[name].[chunkhash].js',
       publicPath: '/'
     },
 

@@ -33,12 +33,24 @@ module.exports = (params) => {
           ]
         },
         {
-          test: /\.(jpe?g|png|svg|gif|ico|ttf|woff|woff2|eot)$/,
+          test: /\.(jpe?g|png|svg|gif)$/,
           use: [
             {
               loader: 'file-loader',
               options: {
                 name: '[name].[hash].[ext]',
+                outputPath: 'assets/',
+              },
+            }
+          ],
+        },
+        {
+          test: /\.(ico|ttf|woff|woff2|eot)$/,
+          use: [
+            {
+              loader: 'file-loader',
+              options: {
+                name: '[name].[ext]',
                 outputPath: 'assets/',
               },
             }
